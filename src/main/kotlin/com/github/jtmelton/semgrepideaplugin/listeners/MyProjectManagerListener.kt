@@ -1,9 +1,9 @@
 package com.github.jtmelton.semgrepideaplugin.listeners
 
+import com.github.jtmelton.semgrepideaplugin.services.MyProjectService
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManagerListener
-import com.github.jtmelton.semgrepideaplugin.services.MyProjectService
 
 internal class MyProjectManagerListener : ProjectManagerListener {
 
