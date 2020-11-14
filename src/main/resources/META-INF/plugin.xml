@@ -16,4 +16,11 @@
         <listener class="com.github.jtmelton.semgrepideaplugin.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
+    <actions>
+        <action id="com.github.jtmelton.semgrepideaplugin.actions.MyTestAction"
+                class="com.github.jtmelton.semgrepideaplugin.actions.MyTestAction" text="My Test Action"
+                description="test action to see on click">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
 </idea-plugin>
