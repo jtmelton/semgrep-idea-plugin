@@ -10,6 +10,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.github.jtmelton.semgrepideaplugin.services.MyApplicationService"/>
         <projectService serviceImplementation="com.github.jtmelton.semgrepideaplugin.services.MyProjectService"/>
+<!--        <annotator language="JAVA" implementationClass="com.github.jtmelton.semgrepideaplugin.extensions.MyJavaAnnotator"/>-->
     </extensions>
 
     <applicationListeners>
