@@ -1,27 +1,22 @@
 <idea-plugin>
     <id>com.github.jtmelton.semgrepideaplugin</id>
-    <name>semgrep-idea-plugin</name>
+    <name>semgrep-idea</name>
     <vendor>jtmelton</vendor>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
-    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends optional="true" config-file="plugin-python.xml">com.intellij.modules.pycharm</depends>
+    <depends optional="true" config-file="plugin-go.xml">org.jetbrains.plugins.go</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.jtmelton.semgrepideaplugin.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.jtmelton.semgrepideaplugin.services.MyProjectService"/>
-<!--        <annotator language="JAVA" implementationClass="com.github.jtmelton.semgrepideaplugin.extensions.MyJavaAnnotator"/>-->
+        <externalAnnotator language="JAVA" implementationClass="com.github.jtmelton.semgrepideaplugin.analysis.SemgrepAnnotator" />
+        <externalAnnotator language="JSON" implementationClass="com.github.jtmelton.semgrepideaplugin.analysis.SemgrepAnnotator" />
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.jtmelton.semgrepideaplugin.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
-    <actions>
-        <action id="com.github.jtmelton.semgrepideaplugin.actions.MyTestAction"
-                class="com.github.jtmelton.semgrepideaplugin.actions.MyTestAction" text="My Test Action"
-                description="test action to see on click">
-            <add-to-group group-id="ToolsMenu" anchor="first"/>
-        </action>
-    </actions>
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable parentId="tools" instance="com.github.jtmelton.semgrepideaplugin.settings.SemgrepSettingsConfigurable"
+                                 id="com.github.jtmelton.semgrepideaplugin.settings.SemgrepSettingsConfigurable" displayName="Semgrep Settings"/>
+    </extensions>
+
 </idea-plugin>
