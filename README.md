@@ -1,7 +1,7 @@
 # semgrep-idea-plugin
 
 ![Build](https://github.com/jtmelton/semgrep-idea-plugin/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/16133.svg)](https://plugins.jetbrains.com/plugin/16133)
+[![Version](https://img.shields.io/jetbrains/plugin/v/16133-semgrep-idea.svg)](https://plugins.jetbrains.com/plugin/16133-semgrep-idea)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/16133-semgrep-idea.svg)](https://plugins.jetbrains.com/plugin/16133-semgrep-idea)
 
 ## Description
