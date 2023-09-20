@@ -7,7 +7,6 @@
 ## Description
 The semgrep-idea-plugin is a simple wrapper tool for the [Semgrep](https://semgrep.dev/) tool (see [GitHub](https://github.com/returntocorp/semgrep)). 
 This should allow you to work in your code environment as you normally would, and receive semgrep notifications in the IDE.
-(Unofficial) This is a simple wrapper for the semgrep open source tool. See https://github.com/jtmelton/semgrep-idea-plugin for more details. (Unofficial) For the official plugin, see https://github.com/returntocorp/semgrep-intellij.
 
 <!-- Plugin description -->
 (Unofficial) This is a simple wrapper for the semgrep open source tool. See https://github.com/jtmelton/semgrep-idea-plugin for more details. (Unofficial) For the official plugin, see https://github.com/returntocorp/semgrep-intellij.
